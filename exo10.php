@@ -15,6 +15,7 @@
     <h2>résultat</h2>
     <?php   
         $nomsInput = array("Nom","Prénom","adresse email","Ville");
+        //crée des champs a remplire avec les elements de l'array a coté
         function afficherInput(array $nomsInput){
             foreach($nomsInput as $valeur){
                 echo "<br>".$valeur;
@@ -23,7 +24,8 @@
         }
         afficherInput($nomsInput);
         $sexe=["Monsieur","Madame","Mademoiselle"];
-         function afficherRadio($tab){$x=0;
+        //crée des boutons radio avec les elements de l'array a coté
+        function afficherRadio($tab){$x=0;
             echo "<br>"."<br>";
             foreach($tab as $sexe){
             echo  '<input type="radio" name="radio'.$x.'value='.$sexe.'">
@@ -33,6 +35,7 @@
         }
         afficherRadio($sexe);
         $elements = array("Développeur Logiciel","Designer web","Intégrateur","Chef de projet");
+        //crée une liste deroulante avec les elements de l'array 
         function alimenterListeDeroulante($elements){
             echo "<br>"."<select>";
             foreach($elements as $valeur){
@@ -41,7 +44,8 @@
             echo "</select>";
         }
         alimenterListeDeroulante($elements);
+        //bouton submit
         echo "<br>"."<br>"."<button>Submit</button>"
- ?>
+?>
 </body>
 </html>

@@ -12,7 +12,9 @@
     <h2>résultat</h2>
     <?php
       $image="http://my.mobirise.com/data/userpic/764.jpg";
+      //nombre de fois que l'image doit etre afficher 
       $x=6;
+      //bouclier fort qui affiche l'image jusqu'a ce que $w soit inferieur de $x
       function repeterImage ($url,int $x){
         for ($w=0;$w<$x;$w++){
             echo "<img src='$url'>";

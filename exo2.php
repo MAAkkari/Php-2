@@ -14,13 +14,16 @@ Réaliser un algorithme permettant d'afficher le tableau HTML suivant (notez que
 s'affichera en majuscule et que le tableau est trié par ordre alphabétique du nom de pays) grâce à
 une fonction personnalisée.
 Vous devrez appeler la fonction comme suit : afficherTableHTML($capitales);
- </p>
+</p>
     <h2>résultat</h2>
-    <?php
+    <?php //l'array a traiter
         $capitales=["France"=>"Paris","Allemagne"=>"Berlin","USA"=>"Washington","Italie"=>"Rome"];
+        //trier le tableau par ordre alphabetique selon la clef
         ksort($capitales);
+        //ouvrir le tableau html nomme les entetes et lui donner une bordure de 1
         echo "<table border='1'><tr><th>Pays</th><th>Capitale</th></tr>";
         function afficherTableHTML(array $capitales){
+        //fonction foreach qui met les elements de l'array dans le tableau au fur et a mesure
             foreach ($capitales as $pays=>$capitale){
                 echo"<tr>
                 <td>".strtoupper($pays)."</td>
@@ -29,6 +32,7 @@ Vous devrez appeler la fonction comme suit : afficherTableHTML($capitales);
             }
         }
         afficherTableHTML($capitales);
+        //fermeture du tableau
         echo "</table>";
     ?>
 </body>

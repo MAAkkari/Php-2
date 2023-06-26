@@ -10,10 +10,11 @@
     <p> Créer une fonction personnalisée convertirMajRouge() permettant de transformer une chaîne de
 caractère passée en argument en majuscules et en rouge.
 Vous devrez appeler la fonction comme suit : convertirMajRouge($texte) ;
- </p>
+</p>
     <h2>résultat</h2>
     <?php
         $texte="Mon texte en parametre";
+        //met le texte dans la balise span en majuscule et lui donne la couleur rouge
         function convertirMajRouge ($texte){ 
             echo "<span style='color: red'>".strtoupper($texte)."</span>";
         }

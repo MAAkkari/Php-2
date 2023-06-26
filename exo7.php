@@ -11,10 +11,12 @@
     dans le tableau associatif si la case est cochée ou non.</p>
     <h2>résultat</h2>
     <?php
-        $elements=["choix 1"=>"false","choix 2"=>"false","choix 3"=>"false"];
+        $elements=["choix 1"=>false,"choix 2"=>false,"choix 3"=>true];
+        //nomme les cases a cocher avec les elemements de l'array en les mettant dans des <input type =checkbox >
         function genererCheckbox($elements ){
             foreach($elements  as $choix=>$etat){
-            echo  '<input type="checkbox" name="checkbox1" value='.$etat.'>
+                $checked = ($etat==true) ? "checked" : "";
+            echo  '<input type="checkbox" name="checkbox1" value='.$choix.' ' . $checked .  '>
                 <label for="checkbox1">'.$choix.'</label>'.'<br>';
             }
         }

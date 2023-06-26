@@ -11,15 +11,16 @@
     valeurs en paramètre ("Monsieur","Madame","Mademoiselle")</p>
     <h2>résultat</h2>
     <?php
-     $sexe=["Monsieur","Madame","Mademoiselle"];
-     function afficherRadio($tab){$x=0;
-         foreach($tab as $sexe){
-         echo  '<input type="radio" name="radio'.$x.'value='.$sexe.'">
-             <label for="radio'.$x.'">'.$sexe.'</label>'.'<br>';
+    $sexe=["Monsieur","Madame","Mademoiselle"];
+    //crée des boutons radio avec les elements de l'array a coté 
+    function afficherRadio($tab){$x=0;
+        foreach($tab as $sexe){
+        echo '<input type="radio" name="radio"'.$x.'value='.$sexe.'">
+            <label for="radio'.$x.'">'.$sexe.'</label>'.'<br>';
             $x+=1;
-         }
-     }
-     afficherRadio($sexe);
- ?>
+        }
+    }
+    afficherRadio($sexe);
+?>
 </body>
 </html>

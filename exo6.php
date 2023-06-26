@@ -11,15 +11,17 @@
     de valeurs</p>
     <h2>résultat</h2>
     <?php
-       $elements = array("Monsieur","Madame","Mademoiselle");
-       echo "<select>";
-       function alimenterListeDeroulante($elements){
+    $elements = array("Monsieur","Madame","Mademoiselle");
+    //ouverture de la liste deroulante avec <select>
+    echo "<select>";
+    //remplis la liste deroulante au fur et a mesure avec les elements de l'array en mettant ces elements entre <option>
+    function alimenterListeDeroulante($elements){
             foreach($elements as $valeur){
             echo "<option value='sexe'>$valeur</option>";
             }
-       }
-       alimenterListeDeroulante($elements);
-       echo "</select>";
+    }
+    alimenterListeDeroulante($elements);
+    echo "</select>";
     ?>
 </body>
 </html>

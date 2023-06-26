@@ -12,6 +12,7 @@
     <h2>résultat</h2>
     <?php
         $nomsInput = array("Nom","Prénom","Ville");
+        //fonction crée des champ a remplir avec <input> et afficher un texte par dessus avec le contenu du tableau
         function afficherInput(array $nomsInput){
             foreach($nomsInput as $valeur){
                 echo "<br>".$valeur;
